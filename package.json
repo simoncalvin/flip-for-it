@@ -1,0 +1,22 @@
+{
+    "name": "flip-for-it",
+    "version": "0.1.0",
+    "devDependencies": {
+        "grunt": "^1.0.1",
+        "grunt-contrib-watch": "^1.0.0",
+        "grunt-elm": "^2.0.0",
+        "grunt-sass": "^2.0.0",
+        "autoprefixer": "^6.7.7",
+        "grunt-postcss": "^0.8.0"
+    },
+    "main": "src/wwwroot/js/main.js",
+    "dependencies": {
+        "bootstrap-sass": "^3.3.7"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "description": ""
+}
