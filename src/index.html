@@ -10,6 +10,12 @@
         <script src="js/main.js"></script>
         <script>
             var app = Elm.Main.fullscreen();
+
+            app.ports.copy.subscribe(function (token) {
+                var target = document.getElementById("tag");
+                target.setSelectionRange(0, target.value.length);
+                document.execCommand("copy");
+            });
         </script>
     </body>
 </html>
