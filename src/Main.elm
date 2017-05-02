@@ -28,7 +28,7 @@ init =
 
 
 view : Model -> Html Msg
-view model =
+view model =        
     let
         form prompt confirmation set =
             Html.form [ onSubmit set ]

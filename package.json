@@ -4,10 +4,21 @@
     "devDependencies": {},
     "main": "api.js",
     "dependencies": {
-        "elm": "^0.18.0"
+        "css-loader": "^0.28.1",
+        "elm": "^0.18.0",
+        "elm-webpack-loader": "^4.3.1",
+        "file-loader": "^0.11.1",
+        "foreman": "^2.0.0",
+        "style-loader": "^0.17.0",
+        "url-loader": "^0.5.8",
+        "webpack": "^2.4.1",
+        "webpack-dev-server": "^2.4.5"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "api": "node api.js",
+        "build": "webpack",
+        "client": "webpack-dev-server --port 3000",
+        "start": "nf start"
     },
     "author": "Simon Calvin",
     "license": "MIT",
