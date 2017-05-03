@@ -10,10 +10,15 @@ var Elm = require('./Main.elm');
 var mountNode = document.getElementById('main');
 
 // .embed() can take an optional second argument. This would be an object describing the data we need to start a program, i.e. a userID or some token
-var app = Elm.Main.embed(mountNode);
+var app = Elm.Main.embed(mountNode, {
+    canCopyToClipboard: document.queryCommandSupported("copy")
+});
 
-app.ports.copy.subscribe(function (token) {
-    var target = document.getElementById("tag");
-    target.setSelectionRange(0, target.value.length);
-    document.execCommand("copy");
+app.ports.selectUrl.subscribe(function () {
+    document.getElementById("url").select()
+});
+
+app.ports.copy.subscribe(function () {
+    if (document.queryCommandEnabled("copy"))
+        document.execCommand("copy");
 });
